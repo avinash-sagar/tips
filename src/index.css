@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.vertical-line {
+  border: none !important;
+  background-color: #000; /* Line color */
+  width: 1.5px !important; /* Line width */
+  height: 40px !important; /* Adjust the height of the line */
+  opacity: 0.2;
+}
