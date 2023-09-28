@@ -4,16 +4,15 @@ import Header from './component/Header';
 
 function App() {
   return (
-    <div>
+    <div className='container-fluid p-0 w-100' >
       <Header />
-      <Container>
-        {/* <Row>
-          <Col>
-            <h1>Hello, React Bootstrap!</h1>
-            <Button variant="primary">Click me</Button>
-          </Col>
-        </Row> */}
-      </Container>
+      <div className='row'> 
+           <img height={700} src='/images/airline_logo.jpg'  />
+           <div  className=' col-4 main-title ms-5' >
+           <h1>Amazing Flight To <br/> Switzerland</h1>
+           <h5 className='mt-3' > Find and book a great experience </h5>
+           </div>
+      </div>
     </div>
   );
 }
