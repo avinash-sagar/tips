@@ -1,45 +1,74 @@
-.App {
+body{
+  margin: 0;
+  padding: 0;
+}
+.hero-container{
+  background-image: url(../public/images/airline_logo.jpg);
+  height: calc(100vh - 63px);
+  background-size: cover;
+}
+.hero-heading{
+  padding: 60px 110px;
+}
+.hero-heading > h1{
+  width: 550px;
+  font-size: 70px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-heading > h2{
+  width: 550px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.hero-menu{
+  background-color: #fff;
+  width: 80%;
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -130px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub-heroContainer{
+  /* background-color: red; */
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sub-heroContainer > h1{
+  font-size: 40px;
+  color: #303030;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 110px;
   text-align: center;
 }
+.sub-heroContainer > p {
+  font-size: 14px;
+  color: #6d6c6c;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 200px;
+  text-align: center;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-cantainer{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 0px;
+  margin-bottom: 100px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.vertical-line {
-  border: none !important;
-  background-color: #000; /* Line color */
-  width: 1px !important; /* Line width */
-  height: 100px !important; /* Adjust the height of the line */
+.form-input{
+  
 }
