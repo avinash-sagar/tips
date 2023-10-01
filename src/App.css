@@ -72,3 +72,12 @@ body{
 .form-input{
   
 }
+
+.menuCard1{
+  width: 400px;
+  border-radius: 6px;
+  z-index: 99999;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 1px solid transparent;
+}

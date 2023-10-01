@@ -1,7 +1,17 @@
 // import { fa-bed } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react'
+import SearchCard from './SearchCard';
 
 const MenuCard = ({ menuData }) => {
+  const [isGO, setIsGO]  = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [values, setValues] = useState({
+    from : "",
+    to : "",
+    checkIn : "",
+    checkOut : ""
+  });
     return (
       <div className="menuCard">
         <div className="menuCardHeader">
@@ -18,13 +28,19 @@ const MenuCard = ({ menuData }) => {
         <div className="divider2"></div>
         <div className="menu-cardItem">
           <div className="menu-input-title">
-            <label className="ps-2">Leaving From</label>
-            <input type="text" className="form-control form-input" placeholder="where are you from ?"  />
+            <label className="ps-2">From</label>
+            <input onClick={()=> {
+              setVisible(true)
+              setIsGO(false)
+            } }  type="text" className="form-control form-input" placeholder="where are you from ?"  />
           </div>
           <img width={40} src={'/images/arrow.jpg'} />
           <div className="menu-input-title">
-            <label className="ps-2">Going to</label>
-            <input  type="text" className="form-control form-input" placeholder="Going to"  />
+            <label className="ps-2">To</label>
+            <input onClick={()=> {
+              setVisible(true)
+              setIsGO(true)
+            } } type="text" className="form-control form-input" placeholder="Going to"  />
           </div>
           <img width={40} src={'/images/arrow.jpg'} />
           <div className="menu-input-title">
@@ -40,6 +56,7 @@ const MenuCard = ({ menuData }) => {
             <p>Search</p>
           </div>
         </div>
+       {visible &&  <SearchCard isGO={isGO} /> }
       </div>
     );
   };

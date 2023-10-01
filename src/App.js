@@ -4,6 +4,7 @@ import "./App.css";
 import MenuCard from "./components/MenuCard";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SearchCard from "./components/SearchCard";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const data = [
