@@ -1,9 +1,9 @@
 
 const flightSlice = createSlice({
     name : "flightData",
-    initialState : "",
+    initialState : {from :"", to :"", departDate :"", returnDate :"" },
     reducers :{
-
+        
     }
 });
 

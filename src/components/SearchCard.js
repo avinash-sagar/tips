@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-function SearchCard({ visible, setVisible , isGO}) {
+function SearchCard({ visible, setVisible , isGO,values ,setValues, setIsGO}) {
     const data = [
         { lable: "Dubai", city: "Dubai Emirate, United Arab Emirates" },
         { lable: "Doha", city: "Qatar" },
@@ -15,7 +15,17 @@ function SearchCard({ visible, setVisible , isGO}) {
                 {
                     data?.map((item, index) => {
                         return <>
-                            <div >
+                            <div onClick={(e)=>{
+                                if(!isGO ){
+                                    setValues({...values, from : item.lable })
+                                    setVisible(false)
+                                    setIsGO(false)
+                                } else{
+                                    setValues({...values, to : item.lable })
+                                    setVisible(false)
+                                    setIsGO(false)
+                                }
+                            }} >
                                 <div><img width={20} src='/images/location.png' /> <label htmlFor="">{item.lable} </label></div>
                                 <div>
                                 <label style={{ opacity: "0.6" }} className='ms-4' >{item.city} </label>
