@@ -17,17 +17,17 @@ const MenuCard = ({ menuData }) => {
     <div className="menuCard">
       <div className="menuCardHeader">
         <div>
-          <p style={{ opacity: "0.6", cursor: "pointer" }} ><img width={40} src={'/images/hotel.png'} />Hotel</p>
+          <p style={{ opacity: "0.6", cursor: "pointer" }} ><i className='fas fa-bed me-1'></i>Hotel</p>
         </div>
         <div>
-          <p style={{ opacity: "0.6", cursor: "pointer", borderBottom: '1px solid blue', borderWidth: '2px' }}><img width={40} src={'/images/flights.jpg'} />Flight</p>
+          <p style={{ opacity: "0.6", cursor: "pointer", borderBottom: '1px solid blue', borderWidth: '2px' }}><i className='fas fa-plane me-1'></i>Flight</p>
         </div>
         <div>
-          <p style={{ opacity: "0.6", cursor: "pointer" }}><img width={30} src={'/images/cars.jpg'} />Car Rental</p>
+          <p style={{ opacity: "0.6", cursor: "pointer" }}><i className='fas fa-car me-1'></i>Car Rental</p>
         </div>
       </div>
       <div className="divider2"></div>
-      <div className="menu-cardItem">
+      <div className="menu-cardItem valign-middle">
         <div className="menu-input-title">
           <label className="ps-2">From</label>
           <input value={values.from} readOnly onClick={() => {
@@ -35,7 +35,9 @@ const MenuCard = ({ menuData }) => {
             setIsGO(false)
           }} type="text" className="form-control form-input" placeholder="where are you from ?" />
         </div>
-        <img width={40} src={'/images/arrow.jpg'} />
+        {/* <img width={40} src={'/images/arrow.jpg'} /> */}
+        {/* <div className='float text-center' ></div> */}
+        <i className='fas fa-exchange-alt mt-4'></i>
         <div className="menu-input-title">
           <label className="ps-2">To</label>
           <input value={values.to} onClick={() => {
@@ -43,12 +45,12 @@ const MenuCard = ({ menuData }) => {
             setIsGO(true)
           }} type="text" className="form-control form-input" placeholder="Going to" />
         </div>
-        <img width={40} src={'/images/arrow.jpg'} />
+        <i className='fas fa-exchange-alt mt-4'></i>
         <div className="menu-input-title">
           <label className="ps-2">Check-In</label>
           <input value={values.checkIn} type="date" onChange={(e)=>  setValues({...values, checkIn : e.target.value}) } className="form-control form-input" placeholder="Check-In" />
         </div>
-        <img width={40} src={'/images/arrow.jpg'} />
+        <i className='fas fa-exchange-alt mt-4'></i>
         <div className="menu-input-title">
           <label className="ps-2">Check Out</label>
           <input value={values.checkOut} onChange={(e)=>  setValues({...values, checkOut : e.target.value}) }  type="date" className="form-control form-input" placeholder="Check Out" />
